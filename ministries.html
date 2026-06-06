@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministries | TSOPC Church</title>
+    <meta name="description" content="Explore the ministries at TSOPC Church — TSOPC Kids, Youth & Young Adults, and Outreach. Find your place to connect, serve, and grow.">
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            height: 40vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            background-image: url('hero-family.png?v=2');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .page-hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.85);
+        }
+        .page-content {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 40px;
+        }
+        .ministry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .ministry-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            padding: 30px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .ministry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .ministry-card i {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+        .ministry-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="logo-transparent.png?v=3" alt="TSOPC Logo" class="nav-logo-img"></a>
+            <div class="nav-links" id="primary-nav">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="connect.html">Connect</a>
+                <a href="ministries.html">Ministries</a>
+                <a href="events.html">Events</a>
+                <a href="giving.html">Giving</a>
+                <a href="resources.html">Resources</a>
+                <a href="live.html">Live</a>
+            </div>
+            <a href="index.html#plan-visit" class="btn btn-primary">Plan a Visit</a>
+            <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="primary-nav"><i aria-hidden="true" class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Ministries</h1>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h2>Find Your Place to Grow</h2>
+            <p style="color: var(--text-muted);">At TSOPC, we believe everyone has a part to play. Explore our ministries and find where you can connect, serve, and grow.</p>
+        </div>
+        
+        <div class="ministry-grid">
+            <div class="ministry-card">
+                <i aria-hidden="true" class="fas fa-child"></i>
+                <h3>TSOPC Kids</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Safe, engaging environments for children newborn through 5th grade to learn about Jesus.</p>
+            </div>
+            <div class="ministry-card">
+                <i aria-hidden="true" class="fas fa-users"></i>
+                <h3>Youth & Young Adults</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Building strong foundations and authentic community for students and young professionals.</p>
+            </div>
+            <div class="ministry-card">
+                <i aria-hidden="true" class="fas fa-hands-helping"></i>
+                <h3>Outreach</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Serving our local community and partnering with global missions to share God's love practically.</p>
+            </div>
+        </div>
+    </main>
+
+        <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="connect.html">Connect</a>
+                <a href="ministries.html">Ministries</a>
+                <a href="events.html">Events</a>
+                <a href="giving.html">Giving</a>
+                <a href="resources.html">Resources</a>
+                <a href="live.html">Live</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/PCUPC/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/plantcityupc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@plantcityupc2962" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i aria-hidden="true" class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TSOPC Church. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
