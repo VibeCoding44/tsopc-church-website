@@ -632,3 +632,192 @@ footer {
         background-attachment: scroll; /* disable parallax */
     }
 }
+
+/* =========================================
+   Inner Page Layout (shared by sub-pages)
+   ========================================= */
+.page-hero {
+    height: 40vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    background-image: url('hero-family.png?v=2');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.page-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+}
+
+.page-content {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+
+/* width / alignment modifiers */
+.page-content.narrow { max-width: 800px; }
+.page-content.medium { max-width: 900px; }
+.page-content.wide   { max-width: 1200px; }
+.page-content.center { text-align: center; }
+
+/* About page prose */
+.page-prose h2 {
+    margin-bottom: 24px;
+    font-size: 2.5rem;
+}
+
+.page-prose p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    color: var(--text-muted);
+}
+
+/* Services */
+.service-info {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 30px;
+    border-left: 4px solid var(--accent-gold);
+}
+
+/* Ministries */
+.ministry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.ministry-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    padding: 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.ministry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.ministry-card i {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 20px;
+}
+
+.ministry-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Events */
+.event-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-left: 4px solid var(--accent-gold);
+}
+
+.event-date {
+    background: var(--primary-dark);
+    color: var(--white);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+}
+
+.event-date .month { font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+.event-date .day { font-size: 2.5rem; font-family: 'Playfair Display', serif; font-weight: 700; }
+
+.event-details {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.event-details h3 { font-size: 1.5rem; margin-bottom: 10px; }
+
+/* Giving */
+.give-box {
+    background: var(--white);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+iframe#subsplash-giving-container {
+    max-height: 650px !important;
+    border-radius: 8px !important;
+    border: none;
+}
+
+/* Resources */
+.resource-box {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.resource-icon {
+    font-size: 2rem;
+    color: var(--accent-gold);
+    background: rgba(217, 119, 6, 0.1);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.resource-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+/* Live stream embed */
+.sap-embed-player {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: #000;
+}
+
+.sap-embed-player > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
