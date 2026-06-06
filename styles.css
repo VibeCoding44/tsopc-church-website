@@ -105,7 +105,7 @@ a {
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     z-index: 1000;
-    padding: 18px 0;
+    padding: 12px 0;
     transition: var(--transition);
 }
 
@@ -124,7 +124,7 @@ a {
 }
 
 .nav-logo-img {
-    height: 80px;
+    height: 100px;
     width: auto;
 }
 
@@ -497,6 +497,11 @@ footer {
     .nav-container {
         padding: 0 20px;
         flex-wrap: wrap; /* allow menu panel to wrap onto full-width rows */
+    }
+
+    /* Cap logo on phones so it doesn't dominate the bar */
+    .nav-logo-img {
+        height: 60px;
     }
 
     /* Collapsed by default; revealed as a stacked panel when .nav-open is set */
