@@ -38,5 +38,6 @@ python3 -m http.server 8000
 
 ## TODO
 
-- `resources.html`: the "Download PDF" reading-plan link is a placeholder (`href="#"`) —
-  point it at the real file.
+- `reading-plan.pdf` is a **placeholder** file. The Resources page "Download PDF"
+  link points at it, but replace its contents with the church's actual
+  church-wide Bible reading plan.
