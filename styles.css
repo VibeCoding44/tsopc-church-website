@@ -435,77 +435,82 @@ a {
 footer {
     background-color: var(--primary-dark);
     color: var(--text-light);
-    padding: 80px 40px 30px;
+    padding: 80px 40px 32px;
 }
 
-.footer-info {
-    max-width: 1280px;
-    margin: 0 auto 50px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    padding-bottom: 50px;
+/* Top region: balanced, equal-width info columns */
+.footer-grid {
+    max-width: 1200px;
+    margin: 0 auto 48px;
+    padding-bottom: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-info h4 {
+.footer-col h4 {
     color: var(--white);
-    font-size: 1rem;
-    margin-bottom: 16px;
-    letter-spacing: 0.02em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
 }
 
-.footer-info ul {
+.footer-col ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-info li {
+.footer-col li {
     color: #94a3b8;
     font-size: 0.95rem;
-    line-height: 1.9;
+    line-height: 1.6;
+    margin-bottom: 12px;
 }
 
-.footer-info a {
+.footer-col a {
     color: #94a3b8;
+    transition: var(--transition);
 }
 
-.footer-info a:hover {
+.footer-col a:hover {
     color: var(--white);
 }
 
-.footer-container {
-    max-width: 1280px;
+/* Explore links sit in two even sub-columns so the column height matches its neighbors */
+.footer-nav ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 24px;
+}
+
+.footer-nav li {
+    margin-bottom: 0;
+}
+
+/* Bottom bar: copyright + social, evenly split */
+.footer-bottom {
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 60px;
+    gap: 20px;
+    color: #94a3b8; /* 6.96:1 on slate — passes 4.5:1 */
+    font-size: 0.9rem;
 }
 
-.footer-links {
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
-}
-
-.footer-links a {
-    color: #94a3b8;
-    font-weight: 500;
-    font-size: 0.95rem;
-}
-
-.footer-links a:hover {
-    color: var(--white);
+.footer-bottom p {
+    margin: 0;
 }
 
 .footer-social {
     display: flex;
-    gap: 16px;
+    gap: 14px;
 }
 
 .footer-social a {
@@ -523,14 +528,6 @@ footer {
 .footer-social a:hover {
     background-color: var(--accent-gold);
     transform: translateY(-4px);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #94a3b8; /* 6.96:1 on slate — passes 4.5:1 (was #64748b = 3.75:1) */
-    font-size: 0.9rem;
 }
 
 /* =========================================
@@ -631,19 +628,20 @@ footer {
         padding: 40px 30px;
     }
     
-    .footer-info {
-        flex-direction: column;
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
         text-align: center;
     }
 
-    .footer-container {
+    .footer-nav ul {
+        justify-items: center;
+    }
+
+    .footer-bottom {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-    }
-
-    .footer-links {
-        justify-content: center;
     }
 }
 
