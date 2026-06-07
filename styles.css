@@ -171,6 +171,13 @@ a, button, .btn, .mobile-toggle {
     width: 100%;
 }
 
+/* Header CTA sits next to small uppercase links, so keep it more compact
+   than the full-size hero buttons */
+.navbar .btn {
+    padding: 10px 22px;
+    font-size: 0.82rem;
+}
+
 .mobile-toggle {
     display: none;
     background: none;
