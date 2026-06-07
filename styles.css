@@ -25,6 +25,9 @@
 
 html {
     scroll-behavior: smooth;
+    /* Stop iOS from inflating text in landscape */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -47,6 +50,12 @@ a {
     text-decoration: none;
     color: inherit;
     transition: var(--transition);
+}
+
+/* Remove the 300ms tap delay and tidy the tap highlight on touch devices */
+a, button, .btn, .mobile-toggle {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(217, 119, 6, 0.15);
 }
 
 /* =========================================
@@ -178,6 +187,7 @@ a {
     position: relative;
     overflow: hidden;
     height: 90vh;
+    height: 90svh; /* avoids the mobile address-bar jump where supported */
     min-height: 700px;
     display: flex;
     align-items: center;
@@ -382,7 +392,7 @@ a {
 
 .visit-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 40px;
     text-align: left;
     margin-bottom: 50px;
@@ -643,6 +653,81 @@ footer {
         justify-content: center;
         text-align: center;
     }
+
+    /* Footer links get full-width tap rows on phones */
+    .footer-nav ul {
+        gap: 4px 24px;
+    }
+
+    .footer-col a {
+        display: inline-block;
+        padding: 6px 0;
+    }
+
+    /* Shorter hero so the fold isn't pushed way down on small screens */
+    .hero {
+        min-height: 540px;
+    }
+
+    .page-hero {
+        min-height: 300px;
+    }
+
+    .page-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Comfortable side gutters + tighter vertical rhythm on phones */
+    .visit-section {
+        padding: 64px 20px;
+    }
+
+    .visit-title {
+        font-size: 2rem;
+    }
+
+    .page-content {
+        margin: 48px auto;
+        padding: 0 20px;
+    }
+
+    .page-prose h2 {
+        font-size: 2rem;
+    }
+
+    .service-info,
+    .visit-card {
+        padding: 28px 24px;
+    }
+
+    /* Stack event cards: full-width date banner on top */
+    .event-card {
+        flex-direction: column;
+    }
+
+    .event-date {
+        min-width: 0;
+    }
+}
+
+/* Small phones (≤480px): scale down the largest type so nothing overflows */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .visit-title,
+    .page-prose h2 {
+        font-size: 1.75rem;
+    }
 }
 
 /* Subsplash Embed Container */
@@ -704,6 +789,7 @@ footer {
    ========================================= */
 .page-hero {
     height: 40vh;
+    height: 40svh;
     min-height: 400px;
     display: flex;
     align-items: center;
@@ -759,7 +845,7 @@ footer {
 /* Ministries */
 .ministry-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 30px;
     margin-top: 40px;
 }
