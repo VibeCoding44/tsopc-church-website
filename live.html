@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
     <title>Live Stream | TSOPC Church</title>
     <meta name="description" content="Watch TSOPC Church live online. We stream every Sunday, plus the Monday Discipleship Hour and Wednesday Mid-Week Service.">
-    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles.css?v=10">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -47,6 +47,30 @@
         <div class="sap-embed-player">
             <iframe title="TSOPC live stream and recent sermons" src="https://subsplash.com/u/plantcityupc/media/embed/d/*next-live?logoWatermark=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-read; clipboard-write"></iframe>
         </div>
+
+        <!-- Live Captions & Translation (powered by CaptionFlow) -->
+        <section class="captions-section" style="margin-top: 72px; text-align: left;">
+            <h2 style="text-align: center; margin-bottom: 12px;">Live Captions &amp; Translation</h2>
+            <p style="color: var(--text-muted); text-align: center; max-width: 640px; margin: 0 auto 28px;">
+                Follow along with real-time captions and pick your language. Captions turn on automatically once a service begins.
+            </p>
+            <!--
+                CaptionFlow embed. URL format: https://caption-flow.com/live/<organization-slug>
+                The slug is set in CaptionFlow > Dashboard > Settings. If your church's slug
+                is not "tsopc", update BOTH the iframe src and the "new tab" link below.
+            -->
+            <div class="captions-embed">
+                <iframe
+                    title="TSOPC live captions and translation"
+                    src="https://caption-flow.com/live/tsopc"
+                    allow="autoplay"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p style="margin-top: 16px; color: var(--text-muted); text-align: center; font-size: 0.95rem;">
+                <i aria-hidden="true" class="fas fa-language" style="margin-right: 8px;"></i>
+                Want captions on your own device while you watch? <a href="https://caption-flow.com/live/tsopc" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); font-weight: 600;">Open captions in a new tab</a>.
+            </p>
+        </section>
 
         <section class="schedule-section" style="margin-top: 80px; text-align: left;">
             <h2 style="margin-bottom: 30px; text-align: center;">Livestream Schedule</h2>

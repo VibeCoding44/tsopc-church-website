@@ -973,3 +973,30 @@ iframe#subsplash-giving-container {
     width: 100%;
     height: 100%;
 }
+
+/* Live captions / translation embed (CaptionFlow) */
+.captions-embed {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    background: var(--primary-dark);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.captions-embed > iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 768px) {
+    .captions-embed {
+        height: 70vh;
+        height: 70svh;
+        min-height: 440px;
+    }
+}
