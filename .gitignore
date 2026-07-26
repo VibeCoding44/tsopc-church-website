@@ -3,3 +3,5 @@
 
 # Local backups created during edits
 .bak/
+
+.wrangler/

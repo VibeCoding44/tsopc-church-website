@@ -1,6 +1,6 @@
 # TSOPC Church Website
 
-Static website for **The Sanctuary of Plant City (TSOPC)** — a church in Plant City, FL.
+Static website for **The Sanctuary of Plant City (TSOPC)**, a church in Plant City, FL.
 
 ## Pages
 
@@ -31,7 +31,7 @@ python3 -m http.server 8000
 
 ## Notes
 
-- `bust_cache_hero.py` — small helper for cache-busting the hero image.
+- `bust_cache_hero.py`, small helper for cache-busting the hero image.
 - Accessibility & UX pass applied: working mobile menu, visible keyboard focus,
   `aria-label`s on icon links, `prefers-reduced-motion` support, labeled iframes,
   and WCAG-compliant color contrast.
