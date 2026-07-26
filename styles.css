@@ -200,13 +200,15 @@ a, button, .btn, .mobile-toggle {
     min-height: 700px;
     display: flex;
     align-items: center;
-    /* Poster still: shown on slow connections, if the video fails, or with reduced motion */
-    background-image: url('hero-sunrise.jpg?v=7');
+    /* Fallback still (low-res paint before the hero <img> decodes) */
+    background-image: url('hero-community-1200.jpg?v=16');
     background-size: cover;
-    background-position: center;
+    background-position: center 30%;
 }
 
-/* Background video layer — sits behind the gradient overlay and the content */
+/* Background image layer — sits behind the gradient overlay and the content.
+   object-position pushes the framing right so faces fall under the lighter side
+   of the left-to-right gradient, keeping the headline over the darker left area. */
 .hero-video {
     position: absolute;
     top: 0;
@@ -214,6 +216,7 @@ a, button, .btn, .mobile-toggle {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: 65% 30%;
     z-index: 0;
 }
 
@@ -227,12 +230,7 @@ a, button, .btn, .mobile-toggle {
     background: linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.4) 100%);
 }
 
-/* Respect users who prefer reduced motion: hide the video, keep the poster still */
-@media (prefers-reduced-motion: reduce) {
-    .hero-video {
-        display: none;
-    }
-}
+/* Hero is now a static photo (no motion), so no reduced-motion handling needed. */
 
 .hero-content {
     position: relative;
