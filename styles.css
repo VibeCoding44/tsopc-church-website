@@ -879,6 +879,123 @@ footer {
     color: var(--accent-gold);
 }
 
+/* Life at The Sanctuary — home gallery */
+.gallery-section {
+    padding: 80px 40px;
+    background-color: var(--background);
+}
+
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery-title {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.gallery-intro {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 640px;
+    margin: 0 auto 48px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    margin: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    background: var(--surface);
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-item img { transition: none; }
+    .gallery-item:hover img { transform: none; }
+}
+
+@media (max-width: 900px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 520px) {
+    .gallery-section { padding: 56px 20px; }
+    .gallery-grid { gap: 12px; }
+    .gallery-title { font-size: 2rem; }
+}
+
+/* Meet Our Pastor */
+.pastor-section {
+    display: grid;
+    grid-template-columns: minmax(0, 320px) 1fr;
+    gap: 40px;
+    align-items: center;
+    margin: 8px 0 48px;
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.pastor-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.pastor-body h2 {
+    margin-top: 0;
+}
+
+.pastor-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin: 0 0 2px;
+}
+
+.pastor-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+@media (max-width: 700px) {
+    .pastor-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+        justify-items: center;
+    }
+    .pastor-photo { max-width: 300px; }
+}
+
 /* Services */
 .service-info {
     background: var(--surface);
